@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>videojuegosRa | Universo Gamer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <header class="navbar">
+    <div class="logo">videojuegos<span>Ra</span></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#torneos">Torneos</a></li>
+        <li><a href="#contacto" class="btn-nav">Comunidad</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección Principal (Hero) -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <span class="badge">NUEVA TEMPORADA 2026</span>
+      <h1>Explora el siguiente nivel en <span>videojuegosRa</span></h1>
+      <p>Noticias, lanzamientos exclusivos, reseñas y torneos competitivos para verdaderos jugadores.</p>
+      <div class="hero-buttons">
+        <a href="#catalogo" class="btn-primary">Ver Juegos</a>
+        <a href="#torneos" class="btn-secondary">Próximos Eventos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catálogo de Juegos Destacados -->
+  <section id="catalogo" class="catalogo">
+    <h2 class="section-title">Títulos <span>Destacados</span></h2>
+    
+    <!-- Buscador Interactivo -->
+    <div class="search-container">
+      <input type="text" id="buscador" placeholder="Buscar juego por nombre o género (ej. RPG, E-Sports, Aventura)...">
+    </div>
+
+    <div class="grid-juegos" id="lista-juegos">
+      
+      <article class="card">
+        <div class="card-banner banner-1">
+          <span class="tag">ACCIÓN / RPG</span>
+        </div>
+        <div class="card-body">
+          <h3>Cyber Shadow: Ra Edition</h3>
+          <p>Sumérgete en una metrópoli futurista con combates tácticos y gráficos de última generación.</p>
+          <div class="card-footer">
+            <span class="platform">PC • PS5 • Xbox</span>
+            <button class="btn-card" onclick="iniciarJuego('Cyber Shadow: Ra Edition')">Jugar Ahora</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-banner banner-2">
+          <span class="tag">E-SPORTS</span>
+        </div>
+        <div class="card-body">
+          <h3>Apex Arena Legends</h3>
+          <p>Compite en equipos de 5 jugadores en arenas dinámicas y sube de rango en la liga global.</p>
+          <div class="card-footer">
+            <span class="platform">PC • Crossplay</span>
+            <button class="btn-card" onclick="iniciarJuego('Apex Arena Legends')">Jugar Ahora</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-banner banner-3">
+          <span class="tag">AVENTURA</span>
+        </div>
+        <div class="card-body">
+          <h3>Templo del Sol Eterno</h3>
+          <p>Descubre civilizaciones antiguas, resuelve acertijos milenarios y desafía guardianes míticos.</p>
+          <div class="card-footer">
+            <span class="platform">Todas las plataformas</span>
+            <button class="btn-card" onclick="iniciarJuego('Templo del Sol Eterno')">Jugar Ahora</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Sección Torneos -->
+  <section id="torneos" class="torneos">
+    <div class="torneo-box">
+      <h2>Copa <span>videojuegosRa</span></h2>
+      <p>Inscripciones abiertas para el torneo regional este fin de semana. ¡Demuestra tu habilidad y gana premios exclusivos!</p>
+      <button id="btn-abrir-modal" class="btn-primary" style="border:none; cursor:pointer; font-size:1rem;">Inscribir a mi equipo</button>
+    </div>
+  </section>
+
+  <!-- Ventana Emergente (Modal) de Inscripción -->
+  <div id="modal-torneo" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>Registro Copa <span>videojuegosRa</span></h3>
+      <form id="form-torneo">
+        <input type="text" id="nombre-equipo" placeholder="Nombre de tu equipo / Clan" required>
+        <input type="text" id="capitan" placeholder="Nickname del Capitán" required>
+        <select id="juego-torneo" required>
+          <option value="">Selecciona el videojuego...</option>
+          <option value="Cyber Shadow">Cyber Shadow: Ra Edition</option>
+          <option value="Apex Arena">Apex Arena Legends</option>
+        </select>
+        <button type="submit" class="btn-primary" style="width:100%; border:none; cursor:pointer;">Confirmar Inscripción</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Notificación flotante (Toast) -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Pie de página -->
+  <footer id="contacto">
+    <p>&copy; 2026 <strong>videojuegosRa</strong>. Desarrollado y publicado con GitHub Pages.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
